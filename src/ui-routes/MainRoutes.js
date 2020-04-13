@@ -17,8 +17,19 @@ const Login = Loadable({
   loader: () => import("../ui-pages/Login"),
   loading: Loading
 });
+
 const UserHome = Loadable({
   loader: () => import("../ui-pages/UserHome"),
+  loading: Loading
+});
+
+const District = Loadable({
+  loader: () => import("../ui-pages/components/District"),
+  loading: Loading
+});
+
+const Menu = Loadable({
+  loader: () => import("../ui-pages/UserHome/components/Content/Dashboard"),
   loading: Loading
 });
 
@@ -26,7 +37,7 @@ const MainRoutes = () => {
   return (
     <div>
       {/* <Route exact path="/" component={Login} /> */}
-      <Route exact path="/" component={State} />
+      <Route exact path="/" component={Language} />
       <Route path="/login" component={Login} />
       <Route path="/user-home" component={UserHome} />
     </div>

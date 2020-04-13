@@ -34,7 +34,7 @@ class State extends React.Component {
       <Grid container className={classes.containerStyle}>
         <Card>
           <Grid item>
-            <Typography>Karnataka</Typography>
+            <Typography>Recovered</Typography>
           </Grid>
           <Divider></Divider>
           <Grid container>

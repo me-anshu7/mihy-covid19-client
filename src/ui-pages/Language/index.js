@@ -59,7 +59,7 @@ class Language extends React.Component {
             }}
           >
             <Typography>Language</Typography>
-            <Button>&#10006;</Button>
+            <Button size="small">&#10006;</Button>
           </div>
           <Divider></Divider>
           <Typography className={classes.assetTypography} gutterBottom>

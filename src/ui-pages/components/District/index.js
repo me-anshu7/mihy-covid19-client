@@ -2,7 +2,7 @@ import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import { mapDispatchToProps } from "../../../ui-utils/commons";
 import { connect } from "react-redux";
-import { Grid, Card, CardHeader } from "@material-ui/core";
+import { Grid, Card, CardHeader, Typography, Divider } from "@material-ui/core";
 
 const styles = {
   root: {
@@ -14,11 +14,18 @@ const styles = {
   },
   container: {
     // padding:"10%",
-    // width:"25%",
+    width: "100%",
     display: "flex",
     alignItems: "center",
     justify: "center",
     flexDirection: "column"
+  },
+  containerStyle: {
+    // margin: "1% 0% 0% 5%"
+    // minWidth: "575"
+    // flexGrow: 1
+    width: "20%",
+    height: "100vh"
   }
 };
 
@@ -28,24 +35,23 @@ class State extends React.Component {
   render() {
     const { classes } = this.props;
     return (
-      <Grid container className={classes.root}>
+      <div className={classes.root}>
         <Card>
           <Grid item>
-            <CardHeader>Karnataka</CardHeader>
+            <Typography gutterBottom variant="h5" component="h2">
+              Bengaluru:{" "}
+            </Typography>
           </Grid>
-          <Grid item>
+          <Divider></Divider>
+          <Grid container>
             <Card>
-              <Typography>Confirmed</Typography>
-              <Typography>Active</Typography>
-              <Typography>Recovered</Typography>
-              <Typography>Deaths</Typography>
+              <Grid item md={6}>
+                <Typography>Confirmed: </Typography>
+              </Grid>
             </Card>
           </Grid>
         </Card>
-        <div className={classes.root}>
-          <div className={classes.container}>State Component</div>
-        </div>
-      </Grid>
+      </div>
     );
   }
 }
