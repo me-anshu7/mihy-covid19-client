@@ -2,7 +2,7 @@ import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import { mapDispatchToProps } from "../../../ui-utils/commons";
 import { connect } from "react-redux";
-import { Grid, Card, CardHeader, Typography } from "@material-ui/core";
+import { Grid, Card, CardHeader } from "@material-ui/core";
 
 const styles = {
   root: {

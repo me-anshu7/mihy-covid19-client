@@ -8,6 +8,11 @@ const Language = Loadable({
   loading: Loading
 });
 
+const State = Loadable({
+  loader: () => import("../ui-pages/components/State"),
+  loading: Loading
+});
+
 const Login = Loadable({
   loader: () => import("../ui-pages/Login"),
   loading: Loading
@@ -21,7 +26,7 @@ const MainRoutes = () => {
   return (
     <div>
       {/* <Route exact path="/" component={Login} /> */}
-      <Route exact path="/" component={Language} />
+      <Route exact path="/" component={State} />
       <Route path="/login" component={Login} />
       <Route path="/user-home" component={UserHome} />
     </div>
